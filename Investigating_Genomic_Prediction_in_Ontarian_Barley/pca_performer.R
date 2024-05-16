@@ -226,7 +226,7 @@ df_group_adjusted_means_varieties_and_yields <- emmeans(fit_lm_varieties_and_yie
 colnames(df_group_adjusted_means_varieties_and_yields)[which(names(df_group_adjusted_means_varieties_and_yields) == "estimate")] <- "Adjusted_Yield_Mean"
 
 # Copy the information about barley types (i.e., six-row vs. two-row barley) from the Government of Canada website (Government of Canada, 2022). Then, read it into R as a tab-delimited tibble and only retain information corresponding to variety names.
-df_cfia_varieties_and_types <- read_delim("barley_types_manual.txt", delim = ",", col_names = c("Variety", "Type"))
+df_cfia_varieties_and_types <- read_delim("barley_types_overlapping_varieties.txt", delim = ",", col_names = c("Variety", "Type"))
 
 # Merge the data frames containing each variety's 1) adjusted yield mean, 2) PCs, 3) generation, and 4) type into one data frame.
 df_ggplot_varieties_yields_and_pcs <- inner_join(df_group_adjusted_means_varieties_and_yields, df_snp_data_varieties_and_pcs) %>%

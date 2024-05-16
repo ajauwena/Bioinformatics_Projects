@@ -1,8 +1,8 @@
-BINF*6999 Project Workflow ("Investigating genomic prediction in Ontarian barley varieties")
+--- Project Workflow: "Investigating Genomic Prediction in Ontarian Barley Varieties" ---
 
 1)  Analyze the historical yield trends of Ontarian barley varieties.
 
-        Done using the R script "Jauwena_Abelhard_Analyzing_Historical_Yield_Trends.R."
+        Done using the R script "historical_yield_trend_analyzer.R."
 
 2)  Trim barcodes from the reads and demultiplex them.
 
@@ -215,7 +215,7 @@ BINF*6999 Project Workflow ("Investigating genomic prediction in Ontarian barley
 
 13) Obtain samples that overlap between the SNP and historical yield data sets.
 
-        Done using the R script "Jauwena_Abelhard_Performing_PCA_on_Imputed_Reads.R."
+        Done using the R script "pca_performer.R."
 
 14) Index the merged VCF file using Tabix.
 
@@ -248,7 +248,7 @@ BINF*6999 Project Workflow ("Investigating genomic prediction in Ontarian barley
 
 16) In R, prune the called SNPs in the overlapping samples, then conduct PCA on the pruned SNPs.
 
-        Done using the R script "Jauwena_Abelhard_Performing_PCA_on_Imputed_Reads.R."
+        Done using the R script "pca_performer.R."
 
 17) Convert the pruned SNPs to the "012" format for use when building the genomic prediction model.
 
@@ -269,8 +269,8 @@ BINF*6999 Project Workflow ("Investigating genomic prediction in Ontarian barley
 
 18) In R, convert the pruned SNPs from the 012 format to the "-101" format.
 
-        Done using the R script "Jauwena_Abelhard_Performing_PCA_on_Imputed_Reads.R."
+        Done using the R script "pca_performer.R."
 
 19) Build and evaluate the genomic prediction model.
 
-        Done using the R script "Jauwena_Abelhard_Performing_Genomic_Prediction_on_Imputed_Reads.R."
+        Done using the R script "genomic_prediction_performer.R."
