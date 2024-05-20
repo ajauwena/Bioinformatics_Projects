@@ -18,7 +18,7 @@ The Bash scripts are divided into two categories: those named "a_*.sh" and those
 
 There are three R scripts included in this repository.
 
-#### "historical_yield_trend_analyzer.R"
+#### historical_yield_trend_analyzer.R
 
 This script elucidates the historical yield trends of 372 barley varieties in Ontario, Canada from 1958 to 2021.
 
