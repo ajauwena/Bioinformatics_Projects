@@ -19,6 +19,9 @@ The Bash scripts are divided into two categories: those named "a_*.sh" and those
 ### R Scripts
 
 There are three R scripts included in this repository.
+
+#### historical_yield_trend_analyzer.R
+
 1. "historical_yield_trend_analyzer.R" – A script that elucidates the historical yield trends of 372 barley varieties in Ontario, Canada from 1958 to 2021.
 2. "pca_performer.R" – A script that performs principal components analysis (PCA) on 54 barley varieties with both SNP and yield data. This script aims to identify genome-wide allelic differences in these barley varieites and determine whether they correlate with yield differences over time..
 3. "genomic_prediction_performer.R" – A script that investigates the utility of genomic prediction on estimating an unknown variety's performance using the genome-wide allelic differences identified in the "pca_performer.R" script.
