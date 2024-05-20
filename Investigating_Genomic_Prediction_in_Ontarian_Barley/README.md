@@ -12,7 +12,7 @@ This repository contains four kinds of files.
 
 ### Bash Scripts
 
-The Bash scripts are divided into two categories: those named "a_*.sh" and those named "b_*.sh". The "a_*.sh" scripts execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017), whereas the "b_*.sh" scripts process called single nucleotide polymorphisms (SNPs) and convert them into a format suitable for genomic prediction.
+The Bash scripts are divided into two categories: those named "a_.sh" and those named "b_.sh". The "a_.sh" scripts execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017), whereas the "b_.sh" scripts process called single nucleotide polymorphisms (SNPs) and convert them into a format suitable for genomic prediction.
 
 ### R Scripts
 
