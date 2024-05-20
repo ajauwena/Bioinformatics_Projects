@@ -10,11 +10,11 @@ This repository contains four kinds of files.
 
 There are two Bash scripts included in this repository.
 
-#### aligner.sh
+#### 1. aligner.sh
 
 This script aligns 10 burbot reads to burbot and cod reference genomes using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" software.
 
-#### alignment_statistics_calculator.sh
+#### 2. alignment_statistics_calculator.sh
 
 This script outputs several alignment statistics of interest into .txt files. These statistics include the i) number of reads mapped, ii) raw total sequences, iii) error rate, iv) average length, v) average quality, and vi) alignment rate.
 
@@ -22,21 +22,21 @@ This script outputs several alignment statistics of interest into .txt files. Th
 
 There are four Python scripts included in this repository.
 
-#### alignment_statistics_csv_burbot_bwa.py
+#### 1. alignment_statistics_csv_burbot_bwa.py
 
 This script outputs the alignment statistics obtained by aligning burbot reads to the burbot reference genome using BWA to CSV files.
 
-#### alignment_statistics_csv_cod_bwa.py
+#### 2. alignment_statistics_csv_cod_bwa.py
 
 This script outputs the alignment statistics obtained by aligning burbot reads to the cod reference genome using BWA to CSV files.
 
 
-#### alignment_statistics_csv_burbot_bowtie2.py
+#### 3. alignment_statistics_csv_burbot_bowtie2.py
 
 This script outputs the alignment statistics obtained by aligning burbot reads to the burbot reference genome using Bowtie 2 to CSV files.
 
 
-#### alignment_statistics_csv_cod_bowtie2.py
+#### 4. alignment_statistics_csv_cod_bowtie2.py
 
 This script outputs the alignment statistics obtained by aligning burbot reads to the cod reference genome using Bowtie 2 to CSV files.
 
