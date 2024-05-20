@@ -8,7 +8,7 @@ This repository contains four kinds of files.
 
 ### 1. Bash Scripts
 
-There are two Bash scripts included in this repository.
+The Bash scripts included in this repository are as follows:
 
 #### aligner.sh
 
@@ -20,7 +20,7 @@ This script outputs several alignment statistics of interest into .txt files. Th
 
 ### 2. Python Scripts
 
-There are four Python scripts included in this repository.
+The Python scripts included in this repository are as follows:
 
 #### alignment_statistics_csv_burbot_bwa.py
 

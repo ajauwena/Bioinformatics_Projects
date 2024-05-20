@@ -16,7 +16,7 @@ The Bash scripts are divided into two categories: those named "a_.sh" and those 
 
 ### 2. R Scripts
 
-There are three R scripts included in this repository.
+The R scripts included in this repository are as follows:
 
 #### historical_yield_trend_analyzer.R
 
