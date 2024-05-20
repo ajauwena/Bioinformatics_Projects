@@ -12,19 +12,23 @@ This repository contains four kinds of files.
 
 ### Bash Scripts
 
-The Bash scripts are divided into two categories: those named "a_*.sh" and those named "b_*.sh".
-1. "a_*.sh" Files – Files that serve to execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017).
-2. "b_*.sh" Files – Files that serve to process called single nucleotide polymorphisms (SNPs) and convert them into a format suitable for genomic prediction.
+The Bash scripts are divided into two categories: those named "a_*.sh" and those named "b_*.sh". The "a_*.sh" scripts execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017), whereas the "b_*.sh" scripts process called single nucleotide polymorphisms (SNPs) and convert them into a format suitable for genomic prediction.
 
 ### R Scripts
 
 There are three R scripts included in this repository.
 
-#### historical_yield_trend_analyzer.R
+#### "historical_yield_trend_analyzer.R"
 
-1. "historical_yield_trend_analyzer.R" – A script that elucidates the historical yield trends of 372 barley varieties in Ontario, Canada from 1958 to 2021.
-2. "pca_performer.R" – A script that performs principal components analysis (PCA) on 54 barley varieties with both SNP and yield data. This script aims to identify genome-wide allelic differences in these barley varieites and determine whether they correlate with yield differences over time..
-3. "genomic_prediction_performer.R" – A script that investigates the utility of genomic prediction on estimating an unknown variety's performance using the genome-wide allelic differences identified in the "pca_performer.R" script.
+This script elucidates the historical yield trends of 372 barley varieties in Ontario, Canada from 1958 to 2021.
+
+#### pca_performer.R
+
+This script performs principal component analysis (PCA) on 54 barley varieties with both SNP and yield data. This script aims to identify genome-wide allelic differences in these barley varieites and determine whether they correlate with yield differences over time.
+
+#### genomic_prediction_performer.R
+
+This script investigates the utility of genomic prediction on estimating an unknown variety's performance using the genome-wide allelic differences identified in the "pca_performer.R" script.
 
 ### Report
 
