@@ -24,7 +24,7 @@ This script elucidates the historical yield trends of 372 barley varieties in On
 
 #### pca_performer.R
 
-This script performs principal component analysis (PCA) on 54 barley varieties with both SNP and yield data. This script aims to identify genome-wide allelic differences in these barley varieites and determine whether they correlate with yield differences over time.
+This script performs principal component analysis (PCA) on 54 barley varieties with both SNP and yield data. It aims to identify genome-wide allelic differences in these barley varieites and determine whether they correlate with yield differences over time.
 
 #### genomic_prediction_performer.R
 
