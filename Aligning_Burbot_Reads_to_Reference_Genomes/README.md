@@ -2,7 +2,11 @@
 
 ## Introduction
 
-High-throughput sequencing facilitated has generated vast quantities of DNA and RNA reads from various organisms<sup>(Reinert et al., 2015)<sup>. As a result, researchers are faced with the task of identifying the  This project aims to investigate how the choice of reference genome and alignment software impacts on read alignment success.
+High-throughput sequencing has generated vast quantities of DNA and RNA reads from various organisms<sup>2</sup>. As a result, researchers are faced with the task of identifying the genomic regions to which these reads belong<sup>2</sup>. The most common approach for this task is to align reads to a reference genome, which helps in determining sequence variations that influence traits within a population, as well as deducing phylogenetic relationships<sup>2,4</sup>.
+
+Unfortunately, this process is computationally demanding and requires efficient algorithms<sup>2</sup>, especially when involving genomes that are large<sup>3</sup> and/or contain long and complex repeat patterns<sup>1</sup>. Additionally, researchers must choose an appropriate reference genome: either a complete genome from a distantly related species or a fragmented genome from the same species. Each choice has its own set of challenges.
+
+This project aims to explore how the choice of reference genome and alignment software affects alignment success. By aligning 10 burbot reads to both a fragmented burbot genome and a complete cod genome using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" alignment software, this project can hopefully identify the most effective alignment method for maximizing alignment success rates.
 
 ## Files
 
@@ -14,7 +18,7 @@ The Bash scripts included in this repository are as follows:
 
 #### aligner.sh
 
-This script aligns 10 burbot reads to burbot and cod reference genomes using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" software.
+This script aligns 10 burbot reads to burbot and cod reference genomes using BWA and Bowtie 2.
 
 #### alignment_statistics_calculator.sh
 
@@ -44,8 +48,15 @@ This script outputs the alignment statistics obtained by aligning burbot reads t
 
 ### 3. R Script
 
-The "alignment_statistics_grapher.R" script visualizes the the alignment rates of the 10 burbot reads when aligned to burbot and cod reference genomes using BWA and Bowtie 2. It also performs t-tests to see whether there is a significant difference in the mean alignment when using the burbot vs. cod reference genomes, as well as when using BWA vs. Bowtie 2.
+The "alignment_statistics_grapher.R" script visualizes the the alignment rates of the 10 burbot reads when aligned to burbot and cod reference genomes using BWA and Bowtie 2. It also performs t-tests to see whether there is a significant difference in the mean alignment when using the burbot versus cod reference genomes, as well as when using BWA versus Bowtie 2.
 
 ### 4. Report
 
 The report, named "report.pdf", outlines the project's background, methods, results, and implications of those results.
+
+## References
+
+1. Phan, V., Gao, S., Tran, Q., & Vo, N. S. (2015). How genome complexity can explain the difficulty of aligning reads to genomes. <em>BMC Bioinformatics, 16</em>(S3). https://doi.org/10.1186/1471-2105-16-S17-S3
+2. Reinert, K., Langmead, B., Weese, D., & Evers, D. J. (2015). Alignment of Next-Generation Sequencing Reads. <em>Annual Reviews of Genomics and Human Genetics, 16</em>, 133-151. https://doi.org/10.1146/annurev-genom-090413-025358
+3. Trapnell, C., & Salzberg, S. L. (2009). How to map billions of short reads onto genomes. <em>Nature Biotechnology, 27</em>, 455-457. https://doi.org/10.1038/nbt0509-455
+4. Valiente-Mullor, C., Beamud, B., Ansari, I., Francés-Cuesta, C., García-González, N., Mejía, L., Ruiz-Hueso, P., & González-Candelas, F. (2021). One is not enough: On the effects of reference genome for the mapping and subsequent analyses of short-reads. <em>PLOS Computational Biology, 17</em>(1). https://doi.org/10.1371/journal.pcbi.1008678
