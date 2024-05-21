@@ -5,7 +5,7 @@
 
 Barley is a key cereal crop in Ontario, Canada, and increasing its production could significantly boost food supply in the region.<sup>4</sup> Investigating the historical yields of Ontarian barley varieties can reveal yield trends and help elucidate the influence of genetic and environmental factors on these yields.<sup>6</sup> Here, genetic factors refer to the breeding of genetically superior varieties, while environmental factors encompass factors unrelated to breeding efforts, such as improved farming practices and climatic changes.<sup>5</sup>
 
-Genetic improvement via breeding efforts is an essential component for accelerating food production.<sup>1</sup> Genomic prediction can enhance this process – it involves using statistical models to predict crop performance based on genotype, and it has been successfully applied to other grains like rice and winter wheat.<sup>2,3,6,7</sup>
+Genetic improvement via breeding efforts is an essential component for accelerating food production.<sup>1</sup> Genomic prediction can enhance this process – it involves using statistical models to predict crop performance based on genotype, and it has been successfully applied to other grains like rice and winter wheat.<sup>2,3,6,8</sup>
 
 This project has three objectives, which are:
 1. To analyze the historical yield trend of Ontarian barley varieties and determine whether this trend is influenced primarily by genetic or environmental factors.
@@ -22,7 +22,7 @@ The Bash scripts are divided into two categories: those named "a_\*.sh" and thos
 
 #### <em>a_\*.sh</em>
 
-Execute the "Fast-GBS" pipeline<sup>(Torkamaneh et al., 2017)</sup>.
+Execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017).
 
 #### <em>b_\*.sh</em>
 
@@ -50,7 +50,7 @@ Outlines the project's background, methods, results, and implications of those r
 
 ### 4. Workflow
 
-<font color="red">The workflow will be added to this repository. It will provide a detailed, step-by-step overview of the project's methods. For each step, it will also specify the tools used, the scripts used, the input files required, and the output files produced.</font>
+<em>The workflow will be added to this repository. It will provide a detailed, step-by-step overview of the project's methods. For each step, it will also specify the tools used, the scripts used, the input files required, and the output files produced.</em>
 
 ## References
 
@@ -60,4 +60,5 @@ Outlines the project's background, methods, results, and implications of those r
 4. Ontario Ministry of Agriculture, Food and Rural Affairs. (2023, October 23). <em>Cereal Production in Ontario</em>. https://omafra.gov.on.ca/english/crops/field/cereal.html
 5. Piepho, H., Laidig, F., Drobek, T., & Meyer, U. (2014). Dissecting genetic and non-genetic sources of long-term yield trend in German official variety trials. <em>Theoretical and Applied Genetics, 127</em>(5), 1009–1018. https://doi.org/10.1007/s00122-014-2275-1
 6. So, D., Smith, A., Sparry, E., & Lukens, L. (2022). Genetics, not environment, contributed to winter wheat yield gains in Ontario, Canada. <em>Theoretical and Applied Genetics, 135</em>(6), 1893–1908. https://doi.org/10.1007/s00122-022-04082-3
-7. Zhao, H., Lin, Z., Khansefid, M., Tibbits, J., & Hayden, M. J. (2023). Genomic prediction and selection response for grain yield in safflower. <em>Frontiers in Genetics, 14</em>. https://doi.org/10.3389/fgene.2023.1129433
+7. Torkamaneh, D., Laroche, J., Bastien, M., Abed, A., & Belzile, F. (2017). Fast-GBS: a new pipeline for the efficient and highly accurate calling of SNPs from genotyping-by-sequencing data. <em>BMC Bioinformatics, 18</em>(1). https://doi.org/10.1186/s12859-016-1431-9
+8. Zhao, H., Lin, Z., Khansefid, M., Tibbits, J., & Hayden, M. J. (2023). Genomic prediction and selection response for grain yield in safflower. <em>Frontiers in Genetics, 14</em>. https://doi.org/10.3389/fgene.2023.1129433
