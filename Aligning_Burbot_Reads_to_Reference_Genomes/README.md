@@ -1,6 +1,6 @@
 # Aligning Burbot Reads to Reference Genomes
 
-## Introduction
+## Overview
 
 High-throughput sequencing has generated vast quantities of DNA and RNA reads from various organisms.<sup>2</sup> As a result, researchers are faced with the task of identifying the genomic regions to which these reads belong.<sup>2</sup> The most common approach for this task is to align reads to a reference genome, which helps in determining sequence variations that influence traits within a population, as well as deducing phylogenetic relationships.<sup>2,4</sup>
 
@@ -14,8 +14,6 @@ This repository contains four kinds of files.
 
 ### 1. Bash Scripts
 
-The Bash scripts included in this repository are as follows:
-
 #### <em>aligner.sh</em>
 
 Aligns 10 burbot reads to burbot and cod reference genomes using BWA and Bowtie 2.
@@ -26,8 +24,6 @@ Outputs several alignment statistics of interest into .txt files. These statisti
 
 ### 2. Python Scripts
 
-The Python scripts included in this repository are as follows:
-
 #### <em>alignment_statistics_csv_burbot_bwa.py</em>
 
 Outputs the alignment statistics obtained by aligning burbot reads to the burbot reference genome using BWA to CSV files.
@@ -36,11 +32,9 @@ Outputs the alignment statistics obtained by aligning burbot reads to the burbot
 
 Outputs the alignment statistics obtained by aligning burbot reads to the cod reference genome using BWA to CSV files.
 
-
 #### <em>alignment_statistics_csv_burbot_bowtie2.py</em>
 
 Outputs the alignment statistics obtained by aligning burbot reads to the burbot reference genome using Bowtie 2 to CSV files.
-
 
 #### <em>alignment_statistics_csv_cod_bowtie2.py</em>
 
