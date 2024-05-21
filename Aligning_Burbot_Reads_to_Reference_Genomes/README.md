@@ -1,6 +1,8 @@
 # Aligning Burbot Reads to Reference Genomes
 
-This project aims to investigate how the choice of reference genome and alignment software impacts on read alignment success.
+## Introduction
+
+High-throughput sequencing facilitated has generated vast quantities of DNA and RNA reads from various organisms^(Reinert et al., 2015)^. As a result, researchers are faced with the task of identifying the  This project aims to investigate how the choice of reference genome and alignment software impacts on read alignment success.
 
 ## Files
 

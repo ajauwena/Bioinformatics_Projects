@@ -1,6 +1,8 @@
 
 # Investigating Genomic Prediction in Ontarian Barley Varieties
 
+## Introduction
+
 This project has three aims, which are as follows:
 1. To elucidate the historical yield trend of barley varieties in Ontario, Canada and determine whether this trend is primarily influenced by genetic or environmental factors.
 2. To identify genome-wide allelic differences in these barley varieties and determine whether they correlate with yield differences over time.
