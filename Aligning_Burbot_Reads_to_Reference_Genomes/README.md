@@ -6,7 +6,7 @@ High-throughput sequencing has generated vast quantities of DNA and RNA reads fr
 
 Unfortunately, this process is computationally demanding and requires efficient algorithms, especially when involving genomes that are large and/or contain long and complex repeat patterns.<sup>1,2,3</sup> Additionally, researchers must choose an appropriate reference genome: either a complete genome from a distantly related species or a fragmented genome from the same species. Each choice has its own set of challenges.
 
-This project aims to explore how the choice of reference genome and alignment software affects alignment success. By aligning 10 burbot reads to both a fragmented burbot genome and a complete cod genome using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" alignment software, this project can hopefully identify the most effective alignment method for maximizing alignment success rates.
+This project aims to explore how the choice of reference genome and alignment software affects alignment success. By aligning 10 burbot (<em>Lota lota</em>) reads to both a fragmented burbot genome and a complete cod genome using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" alignment software, this project can hopefully identify the most effective alignment method for maximizing alignment success rates.
 
 ## Files
 

@@ -15,7 +15,7 @@ library(tidyverse) # (Wickham et al., 2019).
 # --- PROCESSING DATA ---
 
 # Read the data set as a data frame.
-df_data <- read.xlsx(xlsxFile = 'ethiopian_barley_data_set.xlsx', fillMergedCells = TRUE, colNames = TRUE)
+df_data <- read.xlsx(xlsxFile = 'ethiopian_barley_dataset.xlsx', fillMergedCells = TRUE, colNames = TRUE)
 
 # Set the data in the first row as column names and delete the last two columns (i.e., the columns "Loci" and "Code"), which contain loci annotations.
 df_data <- row_to_names(df_data, row_number = 1) %>% # (zek19, 2019)

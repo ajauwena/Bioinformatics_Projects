@@ -3,7 +3,7 @@
 
 ## Overview
 
-Barley is a key cereal crop in Ontario, Canada, and increasing its production could significantly boost food supply in the region.<sup>4</sup> Investigating the historical yields of Ontarian barley varieties can reveal yield trends and help elucidate the influence of genetic and environmental factors on these yields.<sup>6</sup> Here, genetic factors refer to the breeding of genetically superior varieties, while environmental factors encompass factors unrelated to breeding efforts, such as improved farming practices and climatic changes.<sup>5</sup>
+Barley (<em>Hordeum vulgare</em> L.) is a key cereal crop in Ontario, Canada, and increasing its production could significantly boost food supply in the region.<sup>4</sup> Investigating the historical yields of Ontarian barley varieties can reveal yield trends and help elucidate the influence of genetic and environmental factors on these yields.<sup>6</sup> Here, genetic factors refer to the breeding of genetically superior varieties, while environmental factors encompass factors unrelated to breeding efforts, such as improved farming practices and climatic changes.<sup>5</sup>
 
 Genetic improvement via breeding efforts is an essential component for accelerating food production.<sup>1</sup> Genomic prediction can enhance this process – it involves using statistical models to predict crop performance based on genotype, and it has been successfully applied to other grains like rice and winter wheat.<sup>2,3,6,8</sup>
 
@@ -50,7 +50,7 @@ Outlines the project's background, methods, results, and implications of those r
 
 ### 4. Workflow
 
-<em>The workflow will be added to this repository. It will provide a detailed, step-by-step overview of the project's methods. For each step, it will also specify the tools used, the scripts used, the input files required, and the output files produced.</em>
+TBA
 
 ## References
 
