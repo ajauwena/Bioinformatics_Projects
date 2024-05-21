@@ -1,5 +1,5 @@
 
-# Investigating Genomic Prediction in Ontarian Barley Varieties
+# Genomic Prediction Investigation in Ontarian Barley
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# Performing Variant Calling on Burbot Sequences
+# Variant Calling on Burbot Sequences
 
 ## Overview
 
