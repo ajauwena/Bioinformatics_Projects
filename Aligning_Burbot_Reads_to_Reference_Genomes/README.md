@@ -2,9 +2,9 @@
 
 ## Introduction
 
-High-throughput sequencing has generated vast quantities of DNA and RNA reads from various organisms<sup>2</sup>. As a result, researchers are faced with the task of identifying the genomic regions to which these reads belong<sup>2</sup>. The most common approach for this task is to align reads to a reference genome, which helps in determining sequence variations that influence traits within a population, as well as deducing phylogenetic relationships<sup>2,4</sup>.
+High-throughput sequencing has generated vast quantities of DNA and RNA reads from various organisms.<sup>2</sup> As a result, researchers are faced with the task of identifying the genomic regions to which these reads belong.<sup>2</sup> The most common approach for this task is to align reads to a reference genome, which helps in determining sequence variations that influence traits within a population, as well as deducing phylogenetic relationships.<sup>2,4</sup>
 
-Unfortunately, this process is computationally demanding and requires efficient algorithms<sup>2</sup>, especially when involving genomes that are large<sup>3</sup> and/or contain long and complex repeat patterns<sup>1</sup>. Additionally, researchers must choose an appropriate reference genome: either a complete genome from a distantly related species or a fragmented genome from the same species. Each choice has its own set of challenges.
+Unfortunately, this process is computationally demanding and requires efficient algorithms, especially when involving genomes that are large and/or contain long and complex repeat patterns<sup>1,2,3</sup>. Additionally, researchers must choose an appropriate reference genome: either a complete genome from a distantly related species or a fragmented genome from the same species. Each choice has its own set of challenges.
 
 This project aims to explore how the choice of reference genome and alignment software affects alignment success. By aligning 10 burbot reads to both a fragmented burbot genome and a complete cod genome using the "Burrows-Wheeler Aligner" ("BWA") and "Bowtie 2" alignment software, this project can hopefully identify the most effective alignment method for maximizing alignment success rates.
 
