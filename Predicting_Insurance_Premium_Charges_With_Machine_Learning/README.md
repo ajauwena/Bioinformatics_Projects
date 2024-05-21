@@ -53,7 +53,7 @@ To run this script, the following libraries must be installed:
 
 ## Usage
 
-TBA (more scripts, including the master script, will be added).
+More scripts, including the master script, will be added.
 
 To run the master script, execute "python3  master_script.py".
 
