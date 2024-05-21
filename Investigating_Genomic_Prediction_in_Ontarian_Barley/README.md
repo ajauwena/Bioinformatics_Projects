@@ -50,7 +50,7 @@ Outlines the project's background, methods, results, and implications of those r
 
 ### 4. Workflow
 
-TBA
+TBA.
 
 ## References
 
