@@ -50,7 +50,9 @@ Outlines the project's background, methods, results, and implications of those r
 
 ### 4. Workflow
 
-TBA.
+#### <em>workflow.txt</em>
+
+Outlines the procedures for carrying out the project's analyses step-by-step.
 
 ## References
 
