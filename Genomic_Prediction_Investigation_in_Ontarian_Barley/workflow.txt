@@ -1,0 +1,277 @@
+--- Project Workflow ---
+
+1)  Analyze the historical yield trends of Ontarian barley varieties.
+
+        Tool(s):
+        Done using the R script "historical_yield_trend_analyzer.R."
+
+2)  Trim barcodes from the reads and demultiplex them.
+
+        Tool(s):
+            a)  Sabre (ver. 1.00).
+    
+        Script(s):
+            a)  a_01_demultiplexer_june_9_2023.sh.
+            b)  a_01_demultiplexer_may_2022.sh.
+        
+        Input File(s):
+            a)  Pooled reads for the June 9, 2023 samples ("TC1_R1.fastq.gz" and "TC1_R2.fastq.gz").
+            b)  Pooled reads for the May 2022 samples ("Plate1_R1.fastq.gz" and "Plate1_R2.fastq.gz").
+            c)  Barcode file for the June 9, 2023 samples ("Gbs_Illumina_PstI-PlatePositions_June_9_2023_Modified.txt").
+            d)  Barcode file for the May 2022 samples ("Gbs_Illumina_PstI-PlatePositions_May_2022_Modified.txt").
+        
+        Output File(s):
+            a)  Demultiplexed reads.
+
+3)  Conduct quality control checking on the demultiplexed reads.
+
+        Tool(s):
+            a) FastQC (ver. 0.11.9).
+    
+        Script(s):
+            a)  a_02_fastqcer_1_june_9_2023.sh.
+            b)  a_02_fastqcer_1_may_2022.sh.
+        
+        Input File(s):
+            a)  Demultiplexed reads.
+        
+        Output File(s):
+            a)  HTML reports.
+
+4)  Trim Illumina adapters from the demultiplexed reads.
+
+        Tool(s):
+            a) Cutadapt (ver. 3.10.2).
+    
+        Script(s):
+            a)  a_03_adapter_sequence_trimmer_1_june_9_2023.sh.
+            b)  a_03_adapter_sequence_trimmer_1_may_2022.sh.
+        
+        Input File(s):
+            a)  Demultiplexed reads.
+        
+        Output File(s):
+            a)  Demultiplexed and trimmed reads.
+
+5)  Trim repeated bases from the demultiplexed and trimmed reads.
+
+        Tool(s):
+            a)  Cutadapt (ver. 3.10.2).
+        
+        Script(s):
+            a)  a_04_adapter_sequence_trimmer_2_june_9_2023.sh.
+            b)  a_04_adapter_sequence_trimmer_2_may_2022.sh.
+        
+        Input File(s):
+            a)  Demultiplexed and trimmed reads.
+        
+        Output File(s):
+            a)  Demultiplexed and trimmed twice reads.
+
+6)  Conduct quality control checking on the demultiplexed and trimmed twice reads.
+
+        Tool(s):
+            a) FastQC (ver. 0.11.9).
+        
+        Script(s):
+            a)  a_05_fastqcer_2_june_9_2023.sh.
+            b)  a_05_fastqcer_2_may_2022.sh.
+        
+        Input File(s):
+            a)  Demultiplexed and trimmed twice reads.
+        
+        Output File(s):
+            a)  HTML reports.
+
+7)  Build the index for the barley reference genome (see "BINF 6110 - Project 2").
+
+        Tool(s):
+            a)  BWA (ver. 0.7.17), using "bwa index."
+            b)  SAMtools (ver. 1.17), using "samtools faidx."
+        
+        Script(s):
+            a)  a_06.2_reference_genome_indexer.sh.
+        
+        Input File(s):
+            a)  GCA_904849725.1.fasta.
+            b)  GCA_904849725.1.fasta.gz.
+        
+        Output File(s):
+            a)  GCA_904849725.1.fasta.gz.amb.
+            b)  GCA_904849725.1.fasta.gz.ann.
+            c)  GCA_904849725.1.fasta.gz.bwt.
+            d)  GCA_904849725.1.fasta.gz.pac.
+            e)  GCA_904849725.1.fasta.gz.sa.
+            f)  GCA_904849725.1.fasta.fai.
+
+8)  Align the demultiplexed and trimmed twice reads to the indexed barley reference genome, then sort the resultant BAM files (see "BINF 6110 - Project 2").
+
+        Tool(s):
+            a)  BWA (ver. 0.7.17), using "bwa mem."
+            b)  SAMtools (ver. 1.17), using "samtools sort."
+        
+        Script(s):
+            a)  a_07_read_aligner_june_9_2023.sh
+            b)  a_07_read_aligner_may_2022.sh
+        
+        Input File(s):
+            a)  Demultiplexed and trimmed twice reads.
+            b)  GCA_904849725.1.fasta.gz.amb.
+            c)  GCA_904849725.1.fasta.gz.ann.
+            d)  GCA_904849725.1.fasta.gz.bwt.
+            e)  GCA_904849725.1.fasta.gz.pac.
+            f)  GCA_904849725.1.fasta.gz.sa.
+            g)  GCA_904849725.1.fasta.fai.
+        
+        Output File(s):
+            a)  Sorted BAM files.
+
+9)  Append the absolute paths to the sorted BAM files to a TXT file.
+
+        Tool(s):
+            a)  -
+        
+        Script(s):
+            a)  a_08_bam_file_list_generator_june_9_2023.sh.
+            b)  a_08_bam_file_list_generator_may_2022.sh.
+        
+        Input File(s):
+            a)  Sorted BAM files.
+        
+        Output File(s):
+            a)  A TXT file for the June 9, 2023 samples.
+            b)  A TXT file for the May 2022 samples.
+
+10) Call variants in the aligned reads using the variant caller "Platypus" (see "BINF 6110 - Project 3").
+
+        Tool(s):
+            a)  Platypus (ver. 0.8.1), using "callVariants."
+        
+        Script(s):
+            a)  a_09_variant_caller_june_9_2023.sh.
+            b)  a_09_variant_caller_may_2022.sh.
+        
+        Input File(s):
+            a)  A TXT file for the June 9, 2023 samples.
+            b)  A TXT File for the May 2022 samples.
+        
+        Output File(s):
+            a)  A VCF file for the June 9, 2023 samples.
+            b)  A VCF file for the May 2022 samples.
+
+11) Process the VCF files by removing indels and low-quality sites.
+
+        Tool(s):
+            a)  VCFtools (ver. 0.1.16), using "--vcf."
+        
+        Script(s):
+            a)  a_10_vcf_to_tab_june_9_2023.sh
+            b)  a_10_vcf_to_tab_may_2022.sh
+        
+        Input File(s):
+            a)  A VCF file for the June 9, 2023 samples.
+            b)  A VCF file for the May 2022 samples.
+        
+        Output File(s):
+            a)  A processed VCF file for the June 9, 2023 samples.
+            b)  A processed VCF file for the May 2022 samples.
+
+12) Filter and impute VCF files, then merge files into one. The format for the workflow is "[Input file] > [Script or program] > [Output_file]."
+
+        a)  June 9, 2023:
+    
+            i)      "barley_june_9_2023_platypus_snp.recode.vcf" > TASSEL > "barley_june_9_2023_snp_filtered.vcf."
+            ii)     "barley_june_9_2023_snp_filtered.vcf" > "b_01_loci_filterer_and_imputer_june_9_2023.sh" > "barley_june_9_2023_platypus_loci_filtered.recode.vcf" & "barley_june_9_2023_platypus_loci_filtered_imputed.vcf."
+            iii)    "barley_june_9_2023_platypus_loci_filtered_imputed.vcf" > Excel & TASSEL > Threshold for heterozygous calls in lines and/or loci.
+            iv)     "barley_june_9_2023_platypus_loci_filtered.recode.vcf" > TASSEL > "barley_june_9_2023_platypus_loci_filtered_filtered.vcf."
+            v)      "barley_june_9_2023_platypus_loci_filtered_filtered.vcf" > "b_02_loci_imputer_june_9_2023.sh" > "barley_june_9_2023_platypus_loci_filtered_filtered_imputed.vcf."
+            vi)     "barley_june_9_2023_platypus_loci_filtered_filtered_imputed.vcf" > TASSEL > "barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered.vcf."
+            vii)    Run "module load StdEnv/2020 gcc/9.3.0 bcftools/1.16."
+            viii)   Run "bcftools query -l /home/ajauwena/scratch/binf_6999/barley_june_9_2023/analysis/tassel_barley_june_9_2023/barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered.vcf."
+            ix)     Populate "sample_names_june_9_2023.txt" in order of the output from step viii). Match the well positions with their respective sample names found in "sample_list_LLukens_20230322_Plate20toTc1.txt." Separate the well positions and sample names with a whitespace.
+            x)      "barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered.vcf" > "b_03_sample_renamer_june_9_2023.sh" > "barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging.vcf."
+            xi)     "barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging.vcf" > TASSEL > "barley_merged_platypus_loci.vcf."
+                    -   NOTE: When opening the file "barley_june_9_2023_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging.vcf" in TASSEL, use the "Open As" option to open the file as a VCF and tick the "Sort Positions" and "Keep Depth" boxes.
+            xii)    Do one of:
+                    -   "barley_merged_platypus_loci.vcf" > TASSEL > "barley_merged_platypus_loci_filtered.vcf" (same as the May 2022 samples).
+                    -   "barley_merged_platypus_loci.vcf" > "b_04_loci_imputer_merged.sh" > "barley_merged_platypus_loci_imputed.vcf" (same as the May 2022 samples).
+        
+        b)  May 2022:
+    
+            i)      "barley_may_2022_platypus_snp.recode.vcf" > TASSEL > "barley_may_2022_snp_filtered.vcf."
+            ii)     "barley_may_2022_snp_filtered.vcf" > "b_01_loci_filterer_and_imputer_may_2022.sh" > "barley_may_2022_platypus_loci_filtered.recode.vcf" & "barley_may_2022_platypus_loci_filtered_imputed.vcf."
+            iii)    "barley_may_2022_platypus_loci_filtered_imputed.vcf" > Excel & TASSEL > Threshold for heterozygous calls in lines and/or loci.
+            iv)     "barley_may_2022_platypus_loci_filtered.recode.vcf" > TASSEL > "barley_may_2022_platypus_loci_filtered_filtered.vcf."
+            v)      "barley_may_2022_platypus_loci_filtered_filtered.vcf" > "b_02_loci_imputer_may_2022.sh" > "barley_may_2022_platypus_loci_filtered_filtered_imputed.vcf."
+            vi)     "barley_may_2022_platypus_loci_filtered_filtered_imputed.vcf" > TASSEL > "barley_may_2022_platypus_loci_filtered_filtered_imputed_filtered.vcf."
+            vii)    Run "module load StdEnv/2020 gcc/9.3.0 bcftools/1.16."
+            viii)   Run "bcftools query -l /home/ajauwena/scratch/binf_6999/barley_may_2022/analysis/tassel_barley_may_2022/barley_may_2022_platypus_loci_filtered_filtered_imputed_filtered.vcf."
+            ix)     Populate "sample_names_may_2022_conestogo_grouped.txt" in order of the output from step viii). Match the well positions with their respective sample names found in "sample_list_Lukens_20220503_Plate1.txt." Separate the well positions and sample names with a whitespace.
+            x)      "barley_may_2022_platypus_loci_filtered_filtered_imputed.vcf" > "b_03_sample_renamer_may_2022.sh" > "barley_may_2022_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging_conestogo_grouped.vcf."
+            xi)     "barley_may_2022_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging_conestogo_grouped.vcf" > TASSEL > "barley_merged_platypus_loci.vcf."
+                    -   NOTE: When opening the file "barley_may_2022_platypus_loci_filtered_filtered_imputed_filtered_renamed_for_merging_conestogo_grouped.vcf" in TASSEL, use the "Open As" option to open the file as a VCF and tick the "Sort Positions" and "Keep Depth" boxes.
+            xii)    Do one of:
+                    -   "barley_merged_platypus_loci.vcf" > TASSEL > "barley_merged_platypus_loci_filtered.vcf" (same as the June 9, 2023 samples).
+                    -   "barley_merged_platypus_loci.vcf" > "b_04_loci_imputer_merged.sh" > "barley_merged_platypus_loci_imputed.vcf" (same as the June 9, 2023 samples). 
+
+13) Obtain samples that overlap between the SNP and historical yield data sets.
+
+        Done using the R script "pca_performer.R."
+
+14) Index the merged VCF file using Tabix.
+
+        Tool(s):
+            a)  Tabix.
+        
+        Script(s):
+            a)  b_05_tabix_indexer_merged.sh.
+        
+        Input File(s):
+            a)  barley_merged_platypus_loci_imputed.vcf.gz.
+        
+        Output File(s):
+            a)  barley_merged_platypus_loci_imputed.vcf.gz.tbi.
+
+15) Subset overlapping samples.
+
+        Tool(s):
+            a)  BCFtools ("bcftools view").
+        
+        Script(s):
+            a)  b_06_sample_subsetter_merged.sh.
+        
+        Input File(s):
+            a)  overlapping_samples.txt.
+            b)  barley_merged_platypus_loci_imputed.vcf.gz
+        
+        Output File(s):
+            a)  barley_merged_platypus_loci_imputed_subsetted.vcf
+
+16) In R, prune the called SNPs in the overlapping samples, then conduct PCA on the pruned SNPs.
+
+        Done using the R script "pca_performer.R."
+
+17) Convert the pruned SNPs to the "012" format for use when building the genomic prediction model.
+
+        Tool(s):
+            a)  VCFtools.
+        
+        Script(s):
+            a)  b_07_snp_pruner_and_converter_merged.sh.
+        
+        Input File(s):
+            a)  barley_merged_platypus_loci_imputed_subsetted.vcf
+            b)  pruned_snp_ids.txt
+        
+        Output File(s):
+            a)  barley_merged_platypus_loci_imputed_pruned_subsetted_012.012
+            b)  barley_merged_platypus_loci_imputed_pruned_subsetted_012.012.indv
+            c)  barley_merged_platypus_loci_imputed_pruned_subsetted_012.012.pos
+
+18) In R, convert the pruned SNPs from the 012 format to the "-101" format.
+
+        Done using the R script "pca_performer.R."
+
+19) Build and evaluate the genomic prediction model.
+
+        Done using the R script "genomic_prediction_performer.R."
