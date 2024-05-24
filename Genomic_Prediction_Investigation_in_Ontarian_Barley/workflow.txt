@@ -2,7 +2,6 @@
 
 1)  Analyze the historical yield trends of Ontarian barley varieties.
 
-        Tool(s):
         Done using the R script "historical_yield_trend_analyzer.R."
 
 2)  Trim barcodes from the reads and demultiplex them.
