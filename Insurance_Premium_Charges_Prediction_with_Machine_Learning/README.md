@@ -12,11 +12,11 @@ The master script ("master_script.py") performs the following tasks:
 
 ### 1. Exploring and Visualizing Data
 
-Generates plots to visualize the distribution of data.
+Generates plots to visualize the distribution of the raw data.
 
 ### 2. Cleaning Data
 
-Cleans the data by removing missing or incorrect values, detecting and removing outliers, and encoding and shuffling data.
+Cleans the data by removing missing or incorrect values, detecting and removing outliers, and encoding and shuffling data entries.
 
 ### 3. Splitting Data
 
