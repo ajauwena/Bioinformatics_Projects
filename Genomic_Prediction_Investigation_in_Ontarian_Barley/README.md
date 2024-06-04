@@ -22,7 +22,7 @@ The Bash scripts are divided into two categories: those named "a_\*.sh" and thos
 
 #### <em>a_\*.sh</em>
 
-Execute the "Fast-GBS" pipeline proposed by Torkamaneh et al. (2017).
+Execute the Fast-GBS pipeline proposed by Torkamaneh et al. (2017).
 
 #### <em>b_\*.sh</em>
 
