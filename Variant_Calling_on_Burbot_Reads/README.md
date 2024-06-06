@@ -1,12 +1,12 @@
-# Variant Calling on Burbot Sequences
+# Variant Calling on Burbot Reads
 
 ## Overview
 
 Variant calling aims to identify variations in DNA sequences using high-throughput sequencing (HTS) technology, distinguishing true variants from experimental errors.<sup>2,9</sup> Clinical genomic studies typically use variant calling to identify single nucleotide variants (SNVs), small insertions and deletions (indels), and structural variants (SVs).<sup>2,8,11</sup> Variant calling supports genomic research in many ways, such as by aiding in fine mapping and in understanding the genomic bases of diseases.<sup>6,8,9</sup>
 
-BCFtools and Freebayes are popular variant calling software.<sup>2</sup> BCFtools is a Hidden Markov model-based variant caller that uses the Hardy-Weinberg equilibrium to evaluate the most likely genotype for each position in a genome.<sup>3</sup> It is speedy and memory-efficient, but struggles with very large files and has limitations with certain organism types and large genomes.<sup>3,5</sup> On the other hand, Freebayes is a Bayesian variant caller designed to identify small variations by literally aligning sequences to a target.<sup>1,4</sup> Although it performs well with various genome sequences, it requires extensive processing and filtering to avoid issues like having low specificity and sensitivity or failing to detect more SNPs with increasing input read depths.<sup>5,7,10</sup>
+BCFtools and Freebayes are popular variant calling software.<sup>2</sup> BCFtools is a Hidden Markov model-based variant caller that uses the Hardy-Weinberg equilibrium to evaluate the most likely genotype for each position in a genome.<sup>3</sup> It is speedy and memory-efficient, but struggles with very large files and has limitations with certain organism types and large genomes.<sup>3,5</sup> On the other hand, Freebayes is a Bayesian variant caller designed to identify small variations by literally aligning reads to a target.<sup>1,4</sup> Although it performs well with various genomes, it requires extensive processing and filtering to avoid issues like having low specificity and sensitivity or failing to detect more SNPs with increasing input read depths.<sup>5,7,10</sup>
 
-This project aims to compare the performance of BCFtools and Freebayes in identifying variants within 10 burbot (<em>Lota lota</em>) sequences.
+This project aims to compare the performance of BCFtools and Freebayes in identifying variants within 10 burbot (<em>Lota lota</em>) reads.
 
 ## Files
 
@@ -16,7 +16,7 @@ This repository contains three kinds of files.
 
 #### <em>01_sam_to_sorted_bam_converter.sh</em>
 
-Converts the 10 sequences from SAM to BAM format and sorts them.
+Converts the 10 reads from SAM to BAM format and sorts them.
 
 #### <em>02_variant_caller_and_vcf_file_combiner_bcftools.sh</em>
 
@@ -24,11 +24,11 @@ Calls variants using BCFtools and outputs the results to a VCF file.
 
 #### <em>03_read_group_adder.sh</em>
 
-Adds read groups to the 10 sequences in BAM format to prepare them for variant calling using Freebayes (see <em>05_variant_caller_and_vcf_file_combiner_freebayes.sh</em>).
+Adds read groups to the 10 reads in BAM format to prepare them for variant calling using Freebayes (see <em>05_variant_caller_and_vcf_file_combiner_freebayes.sh</em>).
 
 #### <em>04_read_group_reindexer.sh</em>
 
-Reindexes the read groups for the 10 sequences in BAM format to prepare them for variant calling using Freebayes (see <em>05_variant_caller_and_vcf_file_combiner_freebayes.sh</em>).
+Reindexes the read groups for the 10 reads in BAM format to prepare them for variant calling using Freebayes (see <em>05_variant_caller_and_vcf_file_combiner_freebayes.sh</em>).
 
 #### <em>05_variant_caller_and_vcf_file_combiner_freebayes.sh</em>
 
