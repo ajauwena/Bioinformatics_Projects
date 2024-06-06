@@ -47,9 +47,9 @@ Tests all models on unseen testing sets to evaluate their performances.
 To run this script, the following libraries must be installed:
 - Python.
 - Matplotlib.
-- Numpy.
-- Pandas.
-- Scikit-learn.
+- NumPy.
+- pandas.
+- scikit-learn.
 
 ## Usage
 
