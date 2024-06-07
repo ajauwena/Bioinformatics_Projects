@@ -6,7 +6,7 @@ Jauwena, A., Odumosu, O., and Sharif, N.
 
 ## Overview
 
-This project explores and compares various machine learning models to predict insurance premium charges based on six predictor variables: sex, age, BMI, smoker status, region, and number of children. Specifically, it constructs and evaluates the performance of the AdaBoost, k-nearest neighbors (KNN), and support vector machine (SVM) regressors and classifiers. 
+This project explores and compares various machine learning models to predict insurance premium charges based on six predictor variables: sex, age, BMI, smoker status, region, and number of children. Specifically, it constructs and evaluates the performance of the AdaBoost, k-nearest neighbors (KNN), and support vector machine (SVM) regressors and classifiers.
 
 The master script ("master_script.py") performs the following tasks:
 
