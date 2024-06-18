@@ -8,6 +8,12 @@ Assesses how reference genome and alignment software choice impacts alignment su
 
 Uses Bash, Python, and R.
 
+## Clustering Individuals Using SNPs
+
+Investigates the utility of single nucleotide polymorphisms (SNPs) from the ZNF23, FAM135B, and Rbm38 genes as markers for differentiating between individuals from the African and East Asian superpopulations. Also compares the efficacies of four clustering algorithms in differentiating between individuals from these superpopulations using SNPs from ZNF23, FAM135B, and Rbm38.
+
+Uses R.
+
 ## Genomic Prediction Investigation in Ontarian Barley
 
 Explores the factors influencing barley yields in Ontario, Canada, including genetics and the environment. Also assesses the potential of genomic prediction for estimating Ontarian barley performance.
