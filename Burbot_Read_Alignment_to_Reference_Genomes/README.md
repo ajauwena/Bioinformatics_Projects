@@ -10,8 +10,6 @@ This project aims to explore how the choice of reference genome and alignment so
 
 ## Files
 
-This repository contains four kinds of files.
-
 ### 1. Bash Scripts
 
 #### <em>aligner.sh</em>

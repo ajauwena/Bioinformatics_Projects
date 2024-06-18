@@ -10,8 +10,6 @@ This project aims to compare the performance of BCFtools and Freebayes in identi
 
 ## Files
 
-This repository contains three kinds of files.
-
 ### 1. Bash Scripts
 
 #### <em>01_sam_to_sorted_bam_converter.sh</em>

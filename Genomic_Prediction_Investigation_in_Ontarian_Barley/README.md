@@ -14,8 +14,6 @@ This project has three objectives, which are:
 
 ## Files
 
-This repository contains four kinds of files.
-
 ### 1. Bash Scripts
 
 The Bash scripts are divided into two categories: those named "a_\*.sh" and those named "b_\*.sh".

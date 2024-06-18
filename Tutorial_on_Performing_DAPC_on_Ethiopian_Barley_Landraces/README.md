@@ -8,8 +8,6 @@ This project serves as a tutorial on performing DAPC in R to identify genetic gr
 
 ## Files
 
-This repository contains three kinds of files.
-
 ### 1. Tutorial
 
 #### <em>tutorial.pdf</em>
