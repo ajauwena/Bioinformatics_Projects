@@ -1,4 +1,4 @@
-# Burbot Read Alignment to Reference Genomes
+# Aligning Burbot Reads to Reference Genomes
 
 ## Overview
 

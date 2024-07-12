@@ -1,4 +1,4 @@
-# Insurance Premium Charges Prediction: An Exploration and Comparison of Machine Learning Models
+# Predicting Insurance Premium Charges: An Exploration and Comparison of Machine Learning Models
 
 ## Authors
 
