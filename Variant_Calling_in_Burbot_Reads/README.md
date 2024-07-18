@@ -1,4 +1,4 @@
-# Variant Calling on Burbot Reads
+# Variant Calling in Burbot Reads
 
 ## Overview
 

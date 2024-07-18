@@ -1,4 +1,4 @@
-# Tutorial on Performing DAPC on Ethiopian Barley Landraces
+# DAPC Tutorial on Ethiopian Barley Landraces
 
 ## Overview
 
