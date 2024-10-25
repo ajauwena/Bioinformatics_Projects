@@ -20,13 +20,13 @@ Explores the factors influencing barley yields in Ontario, Canada, including gen
 
 Done in Bash and R.
 
-## Predicting Insurance Premiums With Machine Learning
+## Predicting Insurance Premiums with Machine Learning
 
 Evaluates the performances of various machine learning models in predicting insurance premiums charged to a policyholder. Compares the AdaBoost, k-nearest neighbors (KNN), and support vector machine (SVM) regressors and classifiers.
 
 Done in Python.
 
-## SNP-Based Clustering With Machine Learning
+## SNP-Based Clustering with Machine Learning
 
 Investigates the utility of single nucleotide polymorphisms (SNPs) from the ZNF23, FAM135B, and Rbm38 genes as markers for differentiating between individuals from the African and East Asian superpopulations. Also compares the efficacies of four clustering algorithms in differentiating between individuals from these superpopulations using SNPs from ZNF23, FAM135B, and Rbm38.
 

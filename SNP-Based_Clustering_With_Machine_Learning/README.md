@@ -1,3 +1,3 @@
-# SNP-Based Clustering With Machine Learning
+# SNP-Based Clustering with Machine Learning
 
 Description to be added.
