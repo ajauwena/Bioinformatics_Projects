@@ -1,4 +1,4 @@
-# DAPC Tutorial on Ethiopian Barley Landraces
+# Disriminant Analysis of Principal Components Tutorial on Ethiopian Barley Landraces
 
 ## Overview
 
